@@ -1,0 +1,14 @@
+.header-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: #023047;
+  padding: 0 30px;
+  position: absolute;
+}
+.header-container .logo {
+  font-size: 1.5rem;
+  color: #EEEEEE;
+  text-transform: uppercase;
+}

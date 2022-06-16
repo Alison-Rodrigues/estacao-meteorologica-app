@@ -1,0 +1,111 @@
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-grid {
+  width: 80%;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+.container-grid .container-info {
+  background-color: #023047;
+  border-radius: 10px;
+  width: 220px;
+  height: 120px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  color: #EEEEEE;
+  padding: 20px;
+}
+.container-grid .container-info.item-grid1 {
+  width: 350px;
+  height: 400px;
+  justify-content: center;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  align-items: center;
+}
+.container-grid .container-info.item-grid2,
+.container-grid .container-info.item-grid3 {
+  grid-row: 2;
+}
+
+.container-grid .container-info.item-grid4,
+.container-grid .container-info.item-grid5 {
+  grid-row: 3;
+}
+.container-grid .container-info.item-grid1 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container-grid .container-info.item-grid1 .text p:first-child {
+  font-size: 1.2rem;
+
+}
+.container-grid .container-info.item-grid1 .text p:nth-child(2) {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.container-grid .container-info.previsao-tempo .temperatura-agora {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.container-grid .container-info .temperatura-agora img {
+  width: 80px;
+}
+.container-grid .container-info .temperatura-agora p {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.container-grid .container-info.item-grid1 .text-min-max {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+.container-grid .container-info.item-grid1 .text-min-max p {
+  margin: 0 10px;
+  position: relative;
+}
+.container-grid .container-info.item-grid1 .text-min-max p:first-child::before {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background-color: #EEEEEE;
+  position: absolute;
+  right: -10px;
+  transform: rotate(20deg);
+
+}
+.container-grid .container-info.item-grid1 .table-previsao {
+  text-align: center;
+  width: 80%;
+}
+.container-grid .container-info.item-grid1 .table-previsao td img {
+  width: 25px;
+}
+.container-grid .container-info.item-grid1 .table-previsao .seta.azul img {
+  transform: rotate(180deg);
+}
+.container-grid .container-info.item-grid1 .table-previsao .seta {
+  position: absolute;
+}
+
+
