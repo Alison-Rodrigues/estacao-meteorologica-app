@@ -11,8 +11,9 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  gap: 20px;
+  gap: 50px;
   padding: 20px;
+  justify-content: center;
 }
 .container-grid .container-info {
   background-color: #023047;
@@ -107,5 +108,24 @@
 .container-grid .container-info.item-grid1 .table-previsao .seta {
   position: absolute;
 }
-
+.container-grid .container-info.item-grid2 {
+  justify-content: center;
+}
+.container-grid .container-info.item-grid2 .text-info {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.container-grid .container-info.item-grid2 .umidade-agora {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.container-grid .container-info.item-grid2 .umidade-agora img {
+  width: 50px;
+  margin-right: 10px;
+}
 
