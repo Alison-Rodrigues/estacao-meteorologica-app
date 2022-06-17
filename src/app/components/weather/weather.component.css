@@ -24,7 +24,8 @@
   display: flex;
   flex-direction: column;
   color: #EEEEEE;
-  padding: 20px;
+  padding: 15px;
+  justify-content: center;
 }
 .container-grid .container-info.item-grid1 {
   width: 350px;
@@ -108,23 +109,20 @@
 .container-grid .container-info.item-grid1 .table-previsao .seta {
   position: absolute;
 }
-.container-grid .container-info.item-grid2 {
-  justify-content: center;
-}
-.container-grid .container-info.item-grid2 .text-info {
+.container-grid .container-info .text-info {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
-.container-grid .container-info.item-grid2 .umidade-agora {
+.container-grid .container-info .weather-info {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
 }
-.container-grid .container-info.item-grid2 .umidade-agora img {
+.container-grid .container-info .weather-info img {
   width: 40px;
   margin-right: 10px;
 }
