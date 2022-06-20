@@ -1,102 +1,69 @@
-<section class="content">
-  <main class="container-grid">
 
-    <div class="container-info previsao-tempo item-grid1">
+<main class="container-grid">
 
-      <div class="text">
-        <p>Tempo agora em</p>
-        <p>Bebedouro/SP</p>
-      </div><!--text-->
-      <div class="temperatura-agora">
-        <img src="assets/sol_icon.png" alt="Sol amarelo">
-        <p>32º</p>
-      </div><!--temperatura-agora-->
-      <div class="text-min-max">
-        <p>Mínima 16º</p>
-        <p>Máxima 36º</p>
-      </div><!--text-min-max-->
-      <table class="table-previsao">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Hoje</th>
-            <th>Seg</th>
-            <th>Ter</th>
-            <th>Qua</th>
-            <th>Qui</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="seta azul"><img src="assets/seta-azul.png" alt="Seta azul apontada para baixo"></td>
-            <td>16º</td>
-            <td>15º</td>
-            <td>13º</td>
-            <td>12º</td>
-            <td>22º</td>
-          </tr>
-          <tr>
-            <td class="seta vermelha"><img src="assets/seta-vermelha.png" alt="Seta vermelha apontada para cima"></td>
-            <td>22º</td>
-            <td>23º</td>
-            <td>18º</td>
-            <td>16º</td>
-            <td>30º</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><img src="assets/sol_icon.png" alt="Sol amarelo"></td>
-            <td><img src="assets/dia-nublado_icon.png" alt="Sol com nuvem"></td>
-            <td><img src="assets/chuvoso_icon.png" alt="Nuvem com chuva"></td>
-            <td><img src="assets/trovoada_icon.png" alt="Nuvem com trovões e chuva"></td>
-            <td><img src="assets/sol_icon.png" alt="Sol amarelo"></td>
-          </tr>
-        </tbody>
-      </table><!--table-previsao-->
+  <div class="container-info previsao-tempo item-grid1">
 
-    </div><!--container-info previsao-tempo item-grid1-->
+    <div class="text">
+      <p>Tempo agora em</p>
+      <p>{{weatherData.name}}<span>/{{weatherData.state}}</span></p>
+    </div><!--text-->
+    <div class="temperatura-agora">
+      <img src="assets/{{weatherData.data.icon}}.png" alt="Imagem ilustrativa da condição climática">
+      <p>{{weatherData.data.temperature}}º</p>
+    </div><!--temperatura-agora-->
 
-    <div class="container-info umidade-agora item-grid2">
-      <div class="text-info">
-        <p>Umidade</p>
-      </div><!--text-info-->
-      <div class="weather-info umidade-agora">
-        <img src="assets/umidade_icon.png" alt="Umidade">
-        <p>24%</p>
-      </div><!--umidade-agora-->
-    </div><!--container-info umidade-agora item-grid2-->
+    <div class="info-adic">
+      <div class="sensacao">
+        <img src="assets/sensacao.png" alt="">
+        <p>Sensação<span>{{weatherData.data.sensation}}</span>º</p>
+      </div><!--sensacao-->
 
-    <div class="container-info radiacao-uv item-grid3">
-      <div class="text-info">
-        <p>Radiação Uv</p>
-      </div><!--text-info-->
-      <div class="weather-info radiacao-agora">
-        <img src="assets/circulo_verde.png" alt="Circulo Verde">
-        <p>Baixo</p>
-      </div><!--weather-info radiacao-agora-->
-    </div><!--container-info radiacao-uv item-grid3-->
+    </div><!--info-adic-->
 
-    <div class="container-info precao item-grid4">
-      <div class="text-info">
-        <p>Pressão</p>
-      </div><!--text-info-->
-      <div class="weather-info pressao-agora">
-        <img src="assets/atmosferico_icon.png" alt="Pressão atmosférica">
-        <p>1017 mb</p>
-      </div><!--weather-info pressao-agora-->
-    </div><!--container-info precao item-grid4-->
-    
-    <div class="container-info chuva item-grid5">
-      <div class="text-info">
-        <p>Chuva</p>
-      </div><!--text-info-->
-      <div class="weather-info chuva-agora">
-        <img src="assets/chuva_icon.png" alt="Nuvem com chuva">
-        <p>29%</p>
-      </div><!--weather-info chuva-agora-->
-    </div><!--container-info chuva item-grid5-->
 
-  </main><!--container-div-->
-</section><!--content-->
+  </div><!--container-info previsao-tempo item-grid1-->
+
+  <div class="container-info umidade-agora item-grid2">
+    <div class="text-info">
+      <p>Umidade</p>
+    </div><!--text-info-->
+    <div class="weather-info umidade-agora">
+      <img src="assets/umidade_icon.png" alt="Umidade">
+      <p>{{weatherData.data.humidity}}<span>%</span></p>
+    </div><!--umidade-agora-->
+  </div><!--container-info umidade-agora item-grid2-->
+
+  <div class="container-info radiacao-uv item-grid3">
+    <div class="text-info">
+      <p>Radiação Uv</p>
+    </div><!--text-info-->
+    <div class="weather-info radiacao-agora">
+      <img src="assets/circulo_verde.png" alt="Circulo Verde">
+      <p>Baixo</p>
+    </div><!--weather-info radiacao-agora-->
+  </div><!--container-info radiacao-uv item-grid3-->
+
+  <div class="container-info precao item-grid4">
+    <div class="text-info">
+      <p>Pressão</p>
+    </div><!--text-info-->
+    <div class="weather-info pressao-agora">
+      <img src="assets/atmosferico_icon.png" alt="Pressão atmosférica">
+      <p>{{weatherData.data.pressure}}<span>hPa</span></p>
+    </div><!--weather-info pressao-agora-->
+  </div><!--container-info precao item-grid4-->
+
+  <div class="container-info chuva item-grid5">
+    <div class="text-info">
+      <p>Chuva</p>
+    </div><!--text-info-->
+    <div class="weather-info chuva-agora">
+      <img src="assets/chuva_icon.png" alt="Nuvem com chuva">
+      <p>29%</p>
+    </div><!--weather-info chuva-agora-->
+  </div><!--container-info chuva item-grid5-->
+
+</main><!--container-div-->
+
 
 
