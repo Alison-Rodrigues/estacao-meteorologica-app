@@ -104,8 +104,12 @@
   background-color: #219EBC;
   color: #EEEEEE;
   font-weight: 700;
+  transition: all .2s;
 }
-
+.button-more-details:hover {
+  background-color: #147086;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
 .item-grid1 .date p {
   font-size: 0.8rem;
   opacity: 0.7;
