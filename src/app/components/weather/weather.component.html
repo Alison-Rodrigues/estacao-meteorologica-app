@@ -12,14 +12,22 @@
       <p>{{weatherData.data.temperature}}º</p>
     </div><!--temperatura-agora-->
 
-    <div class="info-adic">
-      <div class="sensacao">
-        <img src="assets/sensacao.png" alt="">
+    <div class="info-adic-container">
+      <div class="info-adic sensacao">
+        <img src="assets/sensacao.png" alt="Ícone vapor">
         <p>Sensação<span>{{weatherData.data.sensation}}</span>º</p>
       </div><!--sensacao-->
-
+      <div class="info-adic condition">
+        <img src="assets/nuvem_icon.png" alt="Ícone Nuvem">
+        <p>{{weatherData.data.condition}}</p>
+      </div><!--condition-->
     </div><!--info-adic-->
-
+    <div class="button">
+      <input class="button-more-details" type="button" value="Mais detalhes"/>
+    </div><!--button-->
+    <div class="date">
+      <p><span>Dados atualizados</span>{{weatherData.data.date | date: 'dd/MM/yyyy HH:mm'}}</p>
+    </div><!--date-->
 
   </div><!--container-info previsao-tempo item-grid1-->
 

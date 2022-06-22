@@ -16,7 +16,7 @@
   padding: 20px;
   justify-content: center;
 }
-.container-grid .container-info {
+.container-info {
   background-color: #023047;
   border-radius: 10px;
   width: 220px;
@@ -28,24 +28,25 @@
   padding: 15px;
   justify-content: center;
 }
-.container-grid .container-info.item-grid1 {
-  width: 350px;
-  height: 400px;
-  justify-content: center;
+.item-grid1 {
+  width: 400px;
+  height: 350px;
+  justify-content: space-between;
   grid-row-start: 1;
   grid-row-end: 4;
   align-items: center;
+
 }
-.container-grid .container-info.item-grid2,
-.container-grid .container-info.item-grid3 {
+.item-grid2,
+.item-grid3 {
   grid-row: 2;
 }
 
-.container-grid .container-info.item-grid4,
-.container-grid .container-info.item-grid5 {
+.item-grid4,
+.item-grid5 {
   grid-row: 3;
 }
-.container-grid .container-info.item-grid1 .text {
+.item-grid1 .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,72 +54,96 @@
   text-align: center;
   margin-bottom: 10px;
 }
-.container-grid .container-info.item-grid1 .text p:first-child {
+.item-grid1 .text p:first-child {
   font-size: 1.2rem;
 
 }
-.container-grid .container-info.item-grid1 .text p:nth-child(2) {
+.item-grid1 .text p:nth-child(2) {
   font-size: 1.8rem;
   font-weight: 700;
 }
-.container-grid .container-info.previsao-tempo .temperatura-agora {
+.temperatura-agora {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.container-grid .container-info .temperatura-agora img {
+.temperatura-agora img {
   width: 80px;
 }
-.container-grid .container-info .temperatura-agora p {
+.temperatura-agora p {
   font-size: 3rem;
   font-weight: 700;
   margin-left: 10px;
 }
-.container-grid .container-info.item-grid1 .info-adic .sensacao {
+.info-adic-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.info-adic-container .info-adic {
   display: flex;
   align-items: center;
   margin-top: 10px;
 }
-.container-grid .container-info.item-grid1 .info-adic .sensacao img {
+.info-adic-container .info-adic img {
   width: 30px;
   margin-right: 5px;
 }
-.container-grid .container-info.item-grid1 .info-adic .sensacao span {
+.info-adic-container .sensacao span {
   margin-left: 8px;
 }
+.button-more-details {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 32px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-color: #219EBC;
+  color: #EEEEEE;
+  font-weight: 700;
+}
 
-.container-grid .container-info.item-grid1 .table-previsao {
+.item-grid1 .date p {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.item-grid1 .date span {
+  margin-right: 5px;
+}
+.item-grid1 .table-previsao {
   text-align: center;
   width: 80%;
 }
-.container-grid .container-info.item-grid1 .table-previsao td img {
+.item-grid1 .table-previsao td img {
   width: 25px;
 }
-.container-grid .container-info.item-grid1 .table-previsao .seta.azul img {
+.item-grid1 .table-previsao .seta.azul img {
   transform: rotate(180deg);
 }
-.container-grid .container-info.item-grid1 .table-previsao .seta {
+.item-grid1 .table-previsao .seta {
   position: absolute;
 }
-.container-grid .container-info .text-info {
+.container-info .text-info {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.3rem;
   margin-bottom: 10px;
 }
-.container-grid .container-info .weather-info {
+.container-info .weather-info {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
 }
-.container-grid .container-info .weather-info img {
+.container-info .weather-info img {
   width: 40px;
   margin-right: 10px;
 }
-.container-grid .container-info.item-grid3 .radiacao-agora img {
+.container-info.item-grid3 .radiacao-agora img {
   width: 20px;
 }
 
