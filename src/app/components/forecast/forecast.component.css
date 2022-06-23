@@ -5,3 +5,49 @@
   justify-content: center;
   align-items: center;
 }
+.forecast-container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: rgba(0, 0, 0, 0.7);
+}
+.forecast-container .date span{
+  color: #EEEEEE;
+  background-color: #023047;
+  padding: 5px 10px;
+  border-radius: 32px;
+  width: 120px;
+  text-align: center;
+}
+.forecast-container .condition-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.condition-container .min-max-temp {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+.condition-container .min, .max {
+  align-items: center;
+  display: flex;
+}
+.condition-container .arrow {
+  width: 20px;
+
+}
+.condition-container .arrow.blue {
+  transform: rotate(180deg);
+}
+.condition-container .rain {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 20px;
+}
+.condition-container .rain img {
+  width: 40px;
+}

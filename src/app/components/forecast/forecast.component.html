@@ -1,1 +1,28 @@
+<div class="forecast-container" >
 
+  <div class="date">
+    <span>{{forecastData.data[0].date_br}}</span>
+  </div><!--date-->
+
+  <div class="condition-container">
+    <img src="assets/{{forecastData.data[0].text_icon.icon.day}}.png" alt="Ícone condição atual do clima do dia">
+    <div class="min-max-temp">
+      <div class="min">
+        <img class="arrow blue" src="assets/seta-azul.png" alt="Seta azul apontada para baixo">
+        <span>{{forecastData.data[0].temperature.min}}º</span>
+      </div><!--min-->
+      <div class="max">
+        <img class="arrow red" src="assets/seta-vermelha.png" alt="Seta vermelha apontada para cima">
+        <span>{{forecastData.data[0].temperature.max}}º</span>
+      </div><!--max-->
+    </div><!--min-max-temp-->
+    <div class="rain">
+      <img src="assets/chuva_icon.png" alt="Ícone de nuvem com chuva">
+      <span>{{forecastData.data[0].rain.probability}}%</span>
+    </div><!--rain-->
+    <div class="condition-day">
+      <span>{{forecastData.data[0].text_icon.text.phrase.reduced}}</span>
+    </div><!--condition-day-->
+  </div><!--condition-container-->
+
+</div><!--forecast-container-->

@@ -7,7 +7,7 @@ import { ForecastService } from 'src/app/services/forecast.service';
   styleUrls: ['./forecast.component.css']
 })
 export class ForecastComponent implements OnInit {
-forecastData: any
+forecastData: any;
 
   constructor(private forecastService: ForecastService) { }
 
