@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 const urlCurrentWeather = 'http://apiadvisor.climatempo.com.br/api/v1/weather/locale/4371/current?token='
+const urlForecast = 'http://apiadvisor.climatempo.com.br/api/v1/forecast/locale/4371/days/15?token='
 const token = '0840836acc1d29f717d8e01593f84808'
 
 @Injectable({
@@ -14,5 +15,8 @@ export class WeatherService {
 
   currentWeather(): Observable<any> {
     return this.http.get(`${urlCurrentWeather}${token}`)
+  }
+  forecast(): Observable<any> {
+    return this.http.get(`${urlForecast}${token}`)
   }
 }

@@ -8,6 +8,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class WeatherComponent implements OnInit {
   weatherData: any;
+  forecastData: any;
 
   constructor(private weatherService: WeatherService) { }
   ngOnInit(): void {
@@ -18,6 +19,16 @@ export class WeatherComponent implements OnInit {
       .subscribe(
         data => {
           this.weatherData = data;
+          console.log(data)
+        },
+        error => {
+          console.log(error)
+        }
+      )
+    this.weatherService.forecast()
+      .subscribe(
+        data => {
+          this.forecastData = data;
           console.log(data)
         },
         error => {

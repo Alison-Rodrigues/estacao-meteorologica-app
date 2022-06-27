@@ -1,28 +1,89 @@
-<div class="forecast-container" >
+<div class="forecast-container" *ngFor="let data of forecastData.data">
 
   <div class="date">
-    <span>{{forecastData.data[0].date_br}}</span>
+    <span>{{data.date_br}}</span>
   </div><!--date-->
 
   <div class="condition-container">
-    <img src="assets/{{forecastData.data[0].text_icon.icon.day}}.png" alt="Ícone condição atual do clima do dia">
+    <img src="assets/{{data.text_icon.icon.day}}.png" alt="Ícone condição atual do clima do dia">
+
     <div class="min-max-temp">
       <div class="min">
-        <img class="arrow blue" src="assets/seta-azul.png" alt="Seta azul apontada para baixo">
-        <span>{{forecastData.data[0].temperature.min}}º</span>
+        <img class="info-icon blue" src="assets/seta-azul.png" alt="Seta azul apontada para baixo">
+        <span>{{data.temperature.min}}º</span>
       </div><!--min-->
+
       <div class="max">
-        <img class="arrow red" src="assets/seta-vermelha.png" alt="Seta vermelha apontada para cima">
-        <span>{{forecastData.data[0].temperature.max}}º</span>
+        <img class="info-icon red" src="assets/seta-vermelha.png" alt="Seta vermelha apontada para cima">
+        <span>{{data.temperature.max}}º</span>
       </div><!--max-->
+
     </div><!--min-max-temp-->
+
     <div class="rain">
+
       <img src="assets/chuva_icon.png" alt="Ícone de nuvem com chuva">
-      <span>{{forecastData.data[0].rain.probability}}%</span>
+      <span>{{data.rain.probability}}%</span>
+
     </div><!--rain-->
+
     <div class="condition-day">
-      <span>{{forecastData.data[0].text_icon.text.phrase.reduced}}</span>
+      <span>{{data.text_icon.text.phrase.reduced}}</span>
     </div><!--condition-day-->
+
   </div><!--condition-container-->
 
+  <div class="info-forecast-container">
+
+    <div class="info-container temp">
+      <span class="title-info">Temperatura</span>
+      <div class="info temp">
+        <img src="assets/seta-azul.png" alt="Ícone seta azul apontada para baixo" class="info-icon blue">
+        <span>{{data.temperature.min}}º</span>
+        <img src="assets/seta-vermelha.png" alt="Ícone seta vermelha apontada para cima" class="info-icon red">
+        <span>{{data.temperature.max}}º</span>
+      </div><!--temp-->
+    </div><!--info-temp-->
+
+    <div class="info-container rain">
+      <span class="title-info">Chuva</span>
+      <div class="info rain">
+        <img src="assets/pingos-de-chuva.png" alt="Ícone pingos de chuva" class="info-icon">
+        <span>{{data.rain.probability}} mm -</span>
+        <span>{{data.rain.precipitation}}%</span>
+      </div><!--info rain-->
+    </div><!--info-rain-->
+
+    <div class="info-container wind">
+      <span class="title-info">Vento</span>
+      <div class="info wind">
+        <img src="assets/vento.png" alt="Ícone de vento" class="info-icon">
+        <span>{{data.wind.velocity_avg}} km/h -</span>
+        <span>{{data.wind.direction}}</span>
+      </div><!--info wind-->
+    </div><!--info wind-->
+
+    <div class="info-container humidity">
+      <span class="title-info">Umidade</span>
+      <div class="info humidity">
+        <img src="assets/gota-de-agua-azul.png" alt="Ícone de gota de água azul" class="info-icon">
+        <span>{{data.humidity.min}}%</span>
+        <img src="assets/gota-de-agua-vermelho.png" alt="Ícone de gota de água vermelha" class="info-icon">
+        <span>{{data.humidity.max}}%</span>
+      </div><!--info humidity-->
+    </div><!--info humidity-->
+
+    <div class="info-container sun">
+      <span class="title-info">Sol</span>
+      <div class="info sun">
+        <img src="assets/sol_icon.png" alt="Ícone do sol amarelo" class="info-icon">
+        <div class="info-sun">
+          <span>{{data.sun.sunrise}}</span>
+          <span>{{data.sun.sunset}}</span>
+        </div><!--info-sun-->
+      </div><!--info sun-->
+    </div><!--info sun-->
+
+  </div><!--info-forecast-container-->
+  <div class="line"></div>
 </div><!--forecast-container-->
