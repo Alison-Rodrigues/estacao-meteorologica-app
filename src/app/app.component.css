@@ -14,3 +14,65 @@
   color: #EEEEEE;
   text-transform: uppercase;
 }
+.footer {
+  height: 220px;
+  width: 100%;
+  background-color: #023047;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  justify-content: center;
+}
+.footer .links .footer-links a {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+.footer .links .footer-links a:hover {
+  text-decoration: underline;
+}
+.footer .links .footer-links {
+  list-style: none;
+  color: #EEEEEE;
+}
+.footer-links li:first-child {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+.footer-links li {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+.footer .social-media {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #EEEEEE;
+}
+.footer .line {
+  height: 2px;
+  width: 100%;
+  background-color: #EEEEEE;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+.footer .social-media img {
+  width: 30px;
+
+}
+.footer .social-media a {
+  margin: 0 10px;
+}
+.footer .social-media a:last-child {
+  margin-right: 0;
+}
+.footer .social-media h4 {
+  margin-right: 20px;
+}
+.footer p {
+  text-align: center;
+  color: #EEEEEE;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
