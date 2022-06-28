@@ -10,9 +10,7 @@
   z-index: 99999999;
 }
 .header-container .logo {
-  font-size: 1.5rem;
-  color: #EEEEEE;
-  text-transform: uppercase;
+  width: 200px;
 }
 .footer {
   height: 220px;
