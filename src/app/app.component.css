@@ -27,7 +27,7 @@
   user-select: none;
 }
 .footer {
-  height: 220px;
+  height: 270px;
   width: 100%;
   background-color: #023047;
   display: flex;
@@ -83,14 +83,17 @@
 .footer .social-media h4 {
   margin-right: 20px;
 }
-.footer p {
-  text-align: center;
+.footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #EEEEEE;
   font-size: 0.8rem;
   margin-top: 5px;
+  flex-direction: column;
 }
-.footer .logo-simpli {
+.footer .copyright img {
   width: 50px;
-  position: absolute;
-
+  margin-bottom: 10px;
 }
+

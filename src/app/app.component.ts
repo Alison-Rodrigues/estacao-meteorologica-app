@@ -8,6 +8,7 @@ import { ForecastService } from './services/forecast.service';
 })
 export class AppComponent implements OnInit {
   forecastData: any;
+  title = 'MeteoClima'
 
   constructor(private forecastService: ForecastService) {}
   ngOnInit(): void {
