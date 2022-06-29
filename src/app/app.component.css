@@ -3,14 +3,28 @@
   width: 100%;
   height: 80px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: #023047;
+  background-color: #EEEEEE;
   padding: 0 30px;
   position: fixed;
   z-index: 99999999;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
 .header-container .logo {
-  width: 200px;
+  width: 180px;
+}
+.header-container span {
+  margin-right: 5px;
+  font-weight: 700;
+}
+.header-container p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  border: 1px solid #023047;
+  border-radius: 32px;
+  padding: 5px 10px;
+  user-select: none;
 }
 .footer {
   height: 220px;
@@ -20,6 +34,7 @@
   flex-direction: column;
   padding: 20px 30px;
   justify-content: center;
+  position: relative;
 }
 .footer .links .footer-links a {
   text-decoration: none;
@@ -73,4 +88,9 @@
   color: #EEEEEE;
   font-size: 0.8rem;
   margin-top: 5px;
+}
+.footer .logo-simpli {
+  width: 50px;
+  position: absolute;
+
 }

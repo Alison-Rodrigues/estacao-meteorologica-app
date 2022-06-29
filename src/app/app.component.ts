@@ -6,7 +6,26 @@ import { ForecastService } from './services/forecast.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  forecastData: any;
 
+  constructor(private forecastService: ForecastService) {}
+  ngOnInit(): void {
+    this.forecast()
+  }
 
+  forecast(): void {
+    this.forecastService.forecast()
+    .subscribe(
+      data => {
+        this.forecastData = data
+        console.log(data)
+      },
+      error => {
+        console.log(error)
+      }
+    )
+  }
 }
+
+
