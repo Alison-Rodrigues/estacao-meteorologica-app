@@ -1,19 +1,37 @@
 :host {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #EEEEEE;
+  padding: 0 20px;
+}
+.text-current-weather span {
+  margin-right: 5px;
+  font-weight: 700;
+}
+.text-current-weather p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  border: 1px solid #023047;
+  border-radius: 32px;
+  padding: 5px 10px;
+  user-select: none;
+  text-align: center;
+  display: none;
 }
 .container-grid {
-  width: 90%;
+  width: 100%;
 
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  grid-template-areas:
+  "item-grid1 container-info container-info"
+  "item-grid1 container-info container-info"
+  "item-grid1 container-info container-info";
   gap: 50px;
-  padding: 20px;
+  padding: 20px 0;
   justify-content: center;
 }
 .container-info {
@@ -27,25 +45,18 @@
   color: #EEEEEE;
   padding: 15px;
   justify-content: center;
+  grid-area: "container-info";
+
 }
 .item-grid1 {
   width: 400px;
   height: 350px;
   justify-content: space-between;
-  grid-row-start: 1;
-  grid-row-end: 4;
   align-items: center;
-
-}
-.item-grid2,
-.item-grid3 {
-  grid-row: 2;
+  grid-area: "item-grid1";
+  grid-row: item-grid1;
 }
 
-.item-grid4,
-.item-grid5 {
-  grid-row: 3;
-}
 .item-grid1 .text {
   display: flex;
   flex-direction: column;
@@ -78,13 +89,13 @@
 }
 .info-adic-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 .info-adic-container .info-adic {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 10px 0;
 }
 .info-adic-container .info-adic img {
   width: 30px;
@@ -151,4 +162,41 @@
   width: 20px;
 }
 
+@media only screen and (max-width: 1000px) {
+  :host {
+    min-height: 700px;
+  }
+  .container-grid {
+    grid-template-areas:
+    "item-grid1 container-info"
+    "item-grid1 container-info"
+    ;
+    gap: 20px;
+  }
+  .container-info {
+    width: 100%;
+    height: 100%;
+  }
+  .item-grid1 {
+    width: 100%;
+    height: 350px;
+  }
+  .text-current-weather p {
+    margin-top: 50px;
+    display: block;
+  }
+}
 
+@media only screen and (max-width: 530px) {
+  :host {
+    min-height: 1100px;
+
+  }
+  .container-grid {
+    grid-template-areas:
+    "item-grid1"
+    "container-info";
+    gap: 20px;
+    padding: 20px 0;
+  }
+}

@@ -97,3 +97,14 @@
   margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .header-container p {
+    display: none;
+  }
+  .header-container {
+    justify-content: center;
+  }
+  .footer {
+    height: 290px;
+  }
+}
