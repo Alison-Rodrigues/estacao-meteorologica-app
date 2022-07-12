@@ -4,8 +4,8 @@ import { ForecastComponent } from './components/forecast/forecast.component';
 import { WeatherComponent } from './components/weather/weather.component';
 
 const routes: Routes = [
-  { path: 'index', component: WeatherComponent},
-  { path: '', redirectTo: 'index', pathMatch: 'full'},
+  { path: 'current-weather', component: WeatherComponent},
+  { path: '', redirectTo: 'current-weather', pathMatch: 'full'},
   { path: 'forecast', component: ForecastComponent}
 ];
 
