@@ -4,6 +4,7 @@ Aplicação de uma estação meteorológica que a principio recebe dados da API 
 
 ## Tecnologias utilizadas Front-end
 * Angular
+* TypeScript
 * HTML
 * CSS
 
