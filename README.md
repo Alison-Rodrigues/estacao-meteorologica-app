@@ -1,27 +1,46 @@
-# EstacaoMeteorologica
+# Estação Meteorológica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+## Tecnologias utilizadas Front-end
+* Angular
+* HTML
+* CSS
 
-## Development server
+## Tecnologias utilizadas Back-end
+* Java
+* Spring Boot
+* PostgreSQL
+* Heroku
+* API ClimaTempo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias utilizadas no Arduino
+* Arduino IDE
+* Arduino Uno
+* Sensor de radiação UV
+* Sensor de pressão, umidade e temperatura BME280
+* Sensor de chuva
+* Módulo Wifi ESP8266 esp-01
 
-## Code scaffolding
+## Página principal no Desktop
+---
+![Página principal desktop](src/assets/MeteoClima_principal_desktop.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Página principal no Tablet
+---
+ ![Página principal tablet](src/assets/MeteoClima_principal_tablet.png)
 
-## Build
+## Página principal no celular
+---
+![Página principal mobile](src/assets/MeteoClima_principal_mobile.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Página de previsão no Desktop
+---
+![Página previsão desktop](src/assets/MeteoClima_previsao_desktop.png)
 
-## Running unit tests
+## Página de previsão no Tablet
+---
+![Página previsão tablet](src/assets/MeteoClima_previsao_tablet.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Página de previsão no Celular
+---
+![Página previsão celular](src/assets/MeteoClima_previsao_mobile.png)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
