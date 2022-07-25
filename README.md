@@ -1,5 +1,7 @@
 # Estação Meteorológica
 
+Aplicação de uma estação meteorológica que a principio recebe dados da API do ClimaTempo e posteriormente irá receber dados de um Arduino.
+
 ## Tecnologias utilizadas Front-end
 * Angular
 * HTML
